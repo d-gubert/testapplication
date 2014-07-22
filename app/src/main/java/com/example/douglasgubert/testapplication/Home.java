@@ -56,19 +56,21 @@ public class Home extends Activity {
         EditText editMessage = (EditText) findViewById(R.id.edit_message);
         String message = editMessage.getText().toString();
 
-        if (message.isEmpty())
-        {
+        if (message.isEmpty()) {
             DisplayMessageDialog dialog = new DisplayMessageDialog();
             dialog.setMessage("Text editing field can't be blank.");
             dialog.show(getFragmentManager(), "message");
         }
-        else
-        {
+        else {
             DisplayMessageDialog dialog = new DisplayMessageDialog();
             dialog.setMessage(message);
             dialog.show(getFragmentManager(), "message");
         }
+    }
 
+    public void resetMessage(View view) {
+        EditText editMessage = (EditText) findViewById(R.id.edit_message);
+        editMessage.setText("");
     }
 
     /**

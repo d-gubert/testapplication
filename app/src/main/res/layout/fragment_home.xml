@@ -12,16 +12,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/edit_message_hint"
-        android:layout_alignBottom="@+id/button_send"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/button_send" />
+        android:layout_alignParentRight="true" />
 
     <Button android:id="@+id/button_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
         android:onClick="sendMessage"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true" />
+        android:layout_below="@+id/edit_message"
+        android:layout_alignRight="@+id/edit_message"
+        android:layout_marginRight="45dp"
+        android:width="@dimen/testbuttons_width" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_reset"
+        android:id="@+id/button_reset"
+        android:onClick="resetMessage"
+        android:layout_below="@+id/edit_message"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="45dp"
+        android:width="@dimen/testbuttons_width" />
 
 </RelativeLayout>
