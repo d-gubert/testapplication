@@ -2,18 +2,24 @@ package com.example.douglasgubert.testapplication;
 
 import android.app.Activity;
 import android.app.ActionBar;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.content.Intent;
 import android.os.Build;
-
+import android.widget.EditText;
 
 
 public class Home extends Activity {
+    public final static String EXTRA_MESSAGE = "com.example.douglasgubert.testapplication";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +52,16 @@ public class Home extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void sendMessage(View view) {
+        EditText editMessage = (EditText) findViewById(R.id.edit_message);
+        String message = editMessage.getText().toString();
+
+        DisplayMessageDialog dialog = new DisplayMessageDialog();
+        dialog.setMessage(message);
+        dialog.show(getFragmentManager(), "message");
+
+    }
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -61,4 +77,31 @@ public class Home extends Activity {
             return rootView;
         }
     }
+
+    public static class DisplayMessageDialog extends DialogFragment {
+        private String message;
+
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+            builder.setMessage(message)
+                   .setPositiveButton(R.string.display_message_positive, new DialogInterface.OnClickListener() {
+                       @Override
+                       public void onClick(DialogInterface dialogInterface, int i) {
+
+                       }
+                   });
+
+            return builder.create();
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+    }
+
 }

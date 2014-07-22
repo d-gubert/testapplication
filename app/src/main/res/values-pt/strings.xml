@@ -2,5 +2,8 @@
 
     <string name="app_name">Aplicativo de Teste</string>
     <string name="hello_world">Olá, Mundo!</string>
-
+    <string name="edit_message_hint">Testando campos de edição de texto</string>
+    <string name="action_settings">Configurações</string>
+    <string name="button_send">Enviar</string>
+    <string name="title_activity_display_message">Minha Mensagem</string>
 </resources>
