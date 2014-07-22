@@ -59,7 +59,7 @@ public class Home extends Activity {
         if (message.isEmpty())
         {
             DisplayMessageDialog dialog = new DisplayMessageDialog();
-            dialog.setMessage("Por favor digite algo no campo!");
+            dialog.setMessage("Text editing field can't be blank.");
             dialog.show(getFragmentManager(), "message");
         }
         else
