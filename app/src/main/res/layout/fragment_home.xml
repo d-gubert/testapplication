@@ -33,4 +33,14 @@
         android:layout_alignTop="@+id/button_send"
         android:layout_alignParentRight="true"/>
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_activity_button"
+        android:id="@+id/next_activity_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="openSecondActivity"/>
+
 </RelativeLayout>

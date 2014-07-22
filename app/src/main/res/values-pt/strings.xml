@@ -6,4 +6,5 @@
     <string name="action_settings">Configurações</string>
     <string name="button_send">Enviar</string>
     <string name="title_activity_display_message">Minha Mensagem</string>
+    <string name="next_activity_button">Next Activity</string>
 </resources>

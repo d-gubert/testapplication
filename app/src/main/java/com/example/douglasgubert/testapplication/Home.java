@@ -60,8 +60,7 @@ public class Home extends Activity {
             DisplayMessageDialog dialog = new DisplayMessageDialog();
             dialog.setMessage("Text editing field can't be blank.");
             dialog.show(getFragmentManager(), "message");
-        }
-        else {
+        } else {
             DisplayMessageDialog dialog = new DisplayMessageDialog();
             dialog.setMessage(message);
             dialog.show(getFragmentManager(), "message");
@@ -72,6 +71,11 @@ public class Home extends Activity {
     public void resetMessage(View view) {
         EditText editMessage = (EditText) findViewById(R.id.edit_message);
         editMessage.setText("");
+    }
+
+    public void openSecondActivity(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 
     /**
