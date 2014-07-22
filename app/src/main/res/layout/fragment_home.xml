@@ -22,9 +22,7 @@
         android:text="@string/button_send"
         android:onClick="sendMessage"
         android:layout_below="@+id/edit_message"
-        android:layout_alignRight="@+id/edit_message"
-        android:layout_marginRight="45dp"
-        android:width="@dimen/testbuttons_width" />
+        android:layout_alignParentLeft="true"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -32,9 +30,7 @@
         android:text="@string/button_reset"
         android:id="@+id/button_reset"
         android:onClick="resetMessage"
-        android:layout_below="@+id/edit_message"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="45dp"
-        android:width="@dimen/testbuttons_width" />
+        android:layout_alignTop="@+id/button_send"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>

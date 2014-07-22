@@ -65,6 +65,7 @@ public class Home extends Activity {
             DisplayMessageDialog dialog = new DisplayMessageDialog();
             dialog.setMessage(message);
             dialog.show(getFragmentManager(), "message");
+            resetMessage(view);
         }
     }
 
