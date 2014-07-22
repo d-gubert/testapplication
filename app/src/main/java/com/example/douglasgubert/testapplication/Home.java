@@ -56,9 +56,18 @@ public class Home extends Activity {
         EditText editMessage = (EditText) findViewById(R.id.edit_message);
         String message = editMessage.getText().toString();
 
-        DisplayMessageDialog dialog = new DisplayMessageDialog();
-        dialog.setMessage(message);
-        dialog.show(getFragmentManager(), "message");
+        if (message.isEmpty())
+        {
+            DisplayMessageDialog dialog = new DisplayMessageDialog();
+            dialog.setMessage("Por favor digite algo no campo!");
+            dialog.show(getFragmentManager(), "message");
+        }
+        else
+        {
+            DisplayMessageDialog dialog = new DisplayMessageDialog();
+            dialog.setMessage(message);
+            dialog.show(getFragmentManager(), "message");
+        }
 
     }
 
