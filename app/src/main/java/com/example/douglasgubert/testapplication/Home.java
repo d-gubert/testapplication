@@ -57,12 +57,10 @@ public class Home extends Activity {
         String message = editMessage.getText().toString();
 
         if (message.isEmpty()) {
-            DisplayMessageDialog dialog = new DisplayMessageDialog();
-            dialog.setMessage("Text editing field can't be blank.");
+            DisplayMessageDialog dialog = new DisplayMessageDialog("Text editing field can't be blank.");
             dialog.show(getFragmentManager(), "message");
         } else {
-            DisplayMessageDialog dialog = new DisplayMessageDialog();
-            dialog.setMessage(message);
+            DisplayMessageDialog dialog = new DisplayMessageDialog(message);
             dialog.show(getFragmentManager(), "message");
             resetMessage(view);
         }
@@ -97,6 +95,10 @@ public class Home extends Activity {
     public static class DisplayMessageDialog extends DialogFragment {
         private String message;
 
+        public DisplayMessageDialog(String message) {
+            this.message = message;
+        }
+
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
@@ -109,14 +111,6 @@ public class Home extends Activity {
                    });
 
             return builder.create();
-        }
-
-        public String getMessage() {
-            return message;
-        }
-
-        public void setMessage(String message) {
-            this.message = message;
         }
     }
 
