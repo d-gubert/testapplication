@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="navdrawer_items">
+        <item>@string/navdrawer_item1</item>
+        <item>@string/navdrawer_item2</item>
+        <item>@string/navdrawer_item3</item>
+    </array>
+</resources>
