@@ -17,5 +17,6 @@
         android:layout_width="@dimen/navdrawer_width"
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp"
-        android:background="#ccc" />
+        android:background="#ccc"
+        android:layout_gravity="start"/>
 </android.support.v4.widget.DrawerLayout>

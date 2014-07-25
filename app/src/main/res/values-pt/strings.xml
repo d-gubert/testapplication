@@ -11,4 +11,6 @@
     <string name="navdrawer_item1">Item 1</string>
     <string name="navdrawer_item2">Item 2</string>
     <string name="navdrawer_item3">Item 3</string>
+    <string name="drawer_open">Abrir</string>
+    <string name="drawer_close">Fechar</string>
 </resources>
